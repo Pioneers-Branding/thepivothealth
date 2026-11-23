@@ -177,6 +177,8 @@ input:invalid:focus {
 }
 
     </style>
+    <link rel="stylesheet" href="assets/compliance.css">
+    <script src="assets/compliance.js" defer></script>
 </head>
 
 <body>
@@ -873,6 +875,27 @@ input:invalid:focus {
                     </div>
                 </div>
 
+                <!-- Privacy notice & explicit consent for health data (DPDP Act 2023) -->
+                <div class="pv-consent pv-consent--light mt-8">
+                    <p class="pv-notice"><strong>Before you submit:</strong> this assessment collects your contact
+                        details and health information (such as blood pressure, blood test values, lifestyle habits and
+                        medications). When you click &ldquo;Submit Results&rdquo;, these details and your calculated score
+                        are sent to Pivot Health (Virtus Growth Labs Pvt. Ltd.) through our form provider (Formester) so
+                        that our team can contact you about your results and relevant programmes. This tool is for
+                        general awareness only; it is not a medical diagnosis and does not replace a consultation with a
+                        registered medical practitioner. Your data is not sold and is kept only as long as needed for
+                        this purpose. You can withdraw consent or ask us to access, correct or erase your data at any time
+                        by emailing <a href="mailto:ankur@thepivothealth.com">ankur@thepivothealth.com</a>. See our
+                        <a href="privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+                    <label><input type="checkbox" name="consent_health_data"
+                            value="Explicit consent to health-data processing (v2026-11)" required>
+                        <span>I am 18 years or older and I explicitly consent to Pivot Health processing my health and
+                            contact information for the purposes described above. <span aria-hidden="true">*</span></span></label>
+                    <label><input type="checkbox" name="consent_marketing" value="Yes">
+                        <span>(Optional) Send me heart-health tips and programme updates by email or WhatsApp. I can
+                            unsubscribe at any time.</span></label>
+                </div>
+
                 <div class="flex justify-between mt-8">
                     <button type="button" id="backToStep2C"
                         class="btn-secondary font-medium py-2 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 flex items-center">
@@ -1446,6 +1469,35 @@ input:invalid:focus {
         prepareFormForFormesterSubmission();
     });
 </script>
+
+    <!-- Footer (compliance) -->
+    <footer class="pv-mini-footer">
+        <p class="pv-nav">
+            <a href="index#contact">Contact Us</a> |
+            <a href="privacy-policy">Privacy Policy</a> |
+            <a href="t&amp;c">Terms and Conditions</a> |
+            <a href="terms&amp;conditions">Program Terms</a>
+        </p>
+        <p class="pv-copy">&copy; 2026 Pivot Healthcare. All rights reserved.</p>
+            <!-- Compliance disclaimers (DPDP Act 2023 / NMC) -->
+            <div class="pv-disclaimers">
+                <p><strong>AI-Generated Content Disclaimer:</strong> Certain images, illustrations, or textual
+                    content on this website may be generated or assisted by artificial intelligence (AI). Such content
+                    is intended for informational and illustrative purposes only. AI-generated visuals do not depict
+                    real patients, clients, or actual treatment outcomes, and should not be relied upon as medical
+                    advice.</p>
+                <p><strong>Medical Disclaimer:</strong> The information on this website is for general health
+                    education and wellness purposes only and is not a substitute for professional medical advice,
+                    diagnosis, or treatment. Always consult a qualified, registered medical practitioner about any
+                    medical condition, and do not start, stop, or change any medication without your doctor&rsquo;s
+                    advice. Individual experiences and results vary; no specific outcome is promised or guaranteed.</p>
+                <p class="pv-footer-links">
+                    <a href="privacy-policy">Privacy Policy</a> &middot;
+                    <button type="button" data-cookie-settings>Cookie Settings</button> &middot;
+                    <a href="privacy-policy#grievance">Grievance Officer</a>
+                </p>
+            </div>
+    </footer>
 </body>
 
 </html>
